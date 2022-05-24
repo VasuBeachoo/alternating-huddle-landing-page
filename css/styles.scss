@@ -1,0 +1,87 @@
+// VARIABLES //////////////////////////
+
+$colors: (
+  Very-pale-cyan: hsl(193, 100%, 96%),
+  Very-dark-cyan: hsl(192, 100%, 9%),
+  Grayish-blue: hsl(208, 11%, 55%),
+);
+
+///////////////////////////////////////
+// MIXINS /////////////////////////////
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+///////////////////////////////////////
+// FUNCTIONS //////////////////////////
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+///////////////////////////////////////
+// STYLES /////////////////////////////
+
+body {
+  margin: 0;
+}
+
+.intro {
+  &__header-container {
+    @include flex(row, flex-start, center);
+  }
+
+  &__img-text-container {
+    @include flex(row, center, center);
+  }
+
+  &__text-container {
+    @include flex(column, flex-start, center);
+  }
+
+  &__img-container {
+    @include flex(row, center, center);
+  }
+}
+
+.blocks {
+  &__img-text-container {
+    @include flex(row, flex-start, center);
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__img-container {
+    @include flex(row, center, center);
+  }
+
+  &__text-container {
+    @include flex(column, flex-start, flex-start);
+  }
+}
+
+.cta {
+  @include flex(column, flex-start, center);
+}
+
+.footer {
+  @include flex(row, flex-start, center);
+
+  &__column {
+    @include flex(column, flex-start, center);
+  }
+
+  &__img-text-container {
+    @include flex(row, flex-start, center);
+  }
+
+  &__social-media-icons {
+    @include flex(row, flex-start, center);
+  }
+}
