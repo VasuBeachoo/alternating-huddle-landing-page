@@ -195,6 +195,16 @@ body {
 
 .cta {
   @include flex(column, flex-start, center);
+  height: 300px;
+
+  &__container {
+    @include flex(column, flex-start, center);
+  }
+
+  &__heading {
+    @include heading(26px);
+    margin-bottom: 25px;
+  }
 
   &__btn {
     @include btn();
@@ -202,17 +212,68 @@ body {
 }
 
 .footer {
-  @include flex(row, flex-start, center);
+  @include flex(row, space-around, center);
+  background-color: color(Very-dark-cyan);
+  color: color(Very-pale-cyan);
+  font-family: $body-font;
+  font-size: 12px;
+  width: 100%;
+  padding: 150px 0 50px;
 
   &__column {
-    @include flex(column, flex-start, center);
+    @include flex(column, flex-start, flex-start);
+  }
+
+  &__logo {
+    filter: brightness(0) invert(1);
+    width: 150px;
+    margin-bottom: 20px;
   }
 
   &__img-text-container {
     @include flex(row, flex-start, center);
   }
 
+  &__icon {
+    width: 15px;
+    margin-right: 20px;
+  }
+
+  &__text {
+    max-width: 320px;
+    letter-spacing: 0.5px;
+    line-height: 23px;
+    margin: 8px 0;
+
+    &--link {
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
   &__social-media-icons {
     @include flex(row, flex-start, center);
   }
+
+  &__social-icon {
+    font-size: 20px;
+    border: 1.5px solid color(Very-pale-cyan);
+    border-radius: 100%;
+    padding: 8px 11px;
+    margin: 20px 12px 120px 0;
+    transform: translate(0, 30px);
+    transition: 0.15s;
+
+    &:hover {
+      cursor: pointer;
+      color: color(Pink);
+      border-color: color(Pink);
+    }
+  }
+}
+
+#icon-location {
+  transform: translate(0, -21px);
 }

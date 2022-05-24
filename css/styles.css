@@ -340,6 +340,32 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 300px;
+}
+
+.cta__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cta__heading {
+  color: #00252e;
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .cta__btn {
@@ -378,12 +404,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #00252e;
+  color: #ebfbff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  width: 100%;
+  padding: 150px 0 50px;
 }
 
 .footer__column {
@@ -397,9 +428,16 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer__logo {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  width: 150px;
+  margin-bottom: 20px;
 }
 
 .footer__img-text-container {
@@ -418,6 +456,23 @@ body {
           align-items: center;
 }
 
+.footer__icon {
+  width: 15px;
+  margin-right: 20px;
+}
+
+.footer__text {
+  max-width: 320px;
+  letter-spacing: 0.5px;
+  line-height: 23px;
+  margin: 8px 0;
+}
+
+.footer__text--link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .footer__social-media-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -432,5 +487,28 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer__social-icon {
+  font-size: 20px;
+  border: 1.5px solid #ebfbff;
+  border-radius: 100%;
+  padding: 8px 11px;
+  margin: 20px 12px 120px 0;
+  -webkit-transform: translate(0, 30px);
+          transform: translate(0, 30px);
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.footer__social-icon:hover {
+  cursor: pointer;
+  color: #ff52bf;
+  border-color: #ff52bf;
+}
+
+#icon-location {
+  -webkit-transform: translate(0, -21px);
+          transform: translate(0, -21px);
 }
 /*# sourceMappingURL=styles.css.map */
