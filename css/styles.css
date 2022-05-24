@@ -79,8 +79,10 @@ body {
   border: none;
   border-radius: 30px;
   font-family: "Open Sans", sans-serif;
+  font-size: 14.5px;
   font-weight: 700;
-  padding: 17px 60px;
+  letter-spacing: 0.4px;
+  padding: 18px 60px;
   text-align: center;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -97,6 +99,11 @@ body {
 .intro__header-btn--white {
   background-color: white;
   color: #00252e;
+}
+
+.intro__header-btn--large {
+  font-size: 16.5px;
+  padding: 21px 80px;
 }
 
 .intro__header-btn:hover {
@@ -172,8 +179,10 @@ body {
   border: none;
   border-radius: 30px;
   font-family: "Open Sans", sans-serif;
+  font-size: 14.5px;
   font-weight: 700;
-  padding: 17px 60px;
+  letter-spacing: 0.4px;
+  padding: 18px 60px;
   text-align: center;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -189,6 +198,11 @@ body {
 .intro__text-btn--white {
   background-color: white;
   color: #00252e;
+}
+
+.intro__text-btn--large {
+  font-size: 16.5px;
+  padding: 21px 80px;
 }
 
 .intro__text-btn:hover {
@@ -340,7 +354,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 300px;
+  height: 250px;
 }
 
 .cta__container {
@@ -357,6 +371,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  padding: 50px 80px;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  -webkit-transform: translate(0, 135px);
+          transform: translate(0, 135px);
 }
 
 .cta__heading {
@@ -372,8 +393,10 @@ body {
   border: none;
   border-radius: 30px;
   font-family: "Open Sans", sans-serif;
+  font-size: 14.5px;
   font-weight: 700;
-  padding: 17px 60px;
+  letter-spacing: 0.4px;
+  padding: 18px 60px;
   text-align: center;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -389,6 +412,11 @@ body {
 .cta__btn--white {
   background-color: white;
   color: #00252e;
+}
+
+.cta__btn--large {
+  font-size: 16.5px;
+  padding: 21px 80px;
 }
 
 .cta__btn:hover {
