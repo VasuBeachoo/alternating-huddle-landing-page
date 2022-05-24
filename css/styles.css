@@ -2,23 +2,7 @@ body {
   margin: 0;
 }
 
-.intro__header-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.intro__img-text-container {
+.page-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,9 +16,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 100vh;
 }
 
-.intro__text-container {
+.page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,6 +35,167 @@ body {
           align-items: center;
 }
 
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: url("../images/bg-hero-desktop.svg") #ebfbff;
+  width: 100%;
+}
+
+.intro__header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.intro__logo {
+  width: 180px;
+  margin: 40px 0 0 60px;
+}
+
+.intro__header-btn {
+  border: none;
+  border-radius: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  padding: 17px 60px;
+  text-align: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin: 40px 60px 0 auto;
+}
+
+.intro__header-btn--pink {
+  background-color: #ff52bf;
+  color: #ebfbff;
+}
+
+.intro__header-btn--white {
+  background-color: white;
+  color: #00252e;
+}
+
+.intro__header-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.intro__img-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 80px;
+}
+
+.intro__text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 35px;
+}
+
+.intro__heading {
+  color: #00252e;
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0;
+  width: 90%;
+}
+
+.intro__paragraph {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 25px;
+  width: 90%;
+  margin: 20px 0 35px;
+}
+
+.intro__paragraph--dark {
+  color: #00252e;
+}
+
+.intro__paragraph--gray {
+  color: #808d99;
+}
+
+.intro__paragraph--pale {
+  color: #ebfbff;
+}
+
+.intro__text-btn {
+  border: none;
+  border-radius: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  padding: 17px 60px;
+  text-align: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.intro__text-btn--pink {
+  background-color: #ff52bf;
+  color: #ebfbff;
+}
+
+.intro__text-btn--white {
+  background-color: white;
+  color: #00252e;
+}
+
+.intro__text-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
 .intro__img-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,6 +207,26 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.intro__img {
+  width: 600px;
+}
+
+.blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -121,6 +287,33 @@ body {
           align-items: flex-start;
 }
 
+.blocks__heading {
+  color: #00252e;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.blocks__paragraph {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.blocks__paragraph--dark {
+  color: #00252e;
+}
+
+.blocks__paragraph--gray {
+  color: #808d99;
+}
+
+.blocks__paragraph--pale {
+  color: #ebfbff;
+}
+
 .cta {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,6 +328,34 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.cta__btn {
+  border: none;
+  border-radius: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  padding: 17px 60px;
+  text-align: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.cta__btn--pink {
+  background-color: #ff52bf;
+  color: #ebfbff;
+}
+
+.cta__btn--white {
+  background-color: white;
+  color: #00252e;
+}
+
+.cta__btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .footer {

@@ -1,10 +1,16 @@
 // VARIABLES //////////////////////////
 
 $colors: (
+  Pink: hsl(322, 100%, 66%),
   Very-pale-cyan: hsl(193, 100%, 96%),
   Very-dark-cyan: hsl(192, 100%, 9%),
   Grayish-blue: hsl(208, 11%, 55%),
+  White: hsl(0, 100%, 100%),
 );
+
+$heading-font: "Poppins", sans-serif;
+$body-font: "Open Sans", sans-serif;
+$section-font-size: 16px;
 
 ///////////////////////////////////////
 // MIXINS /////////////////////////////
@@ -14,6 +20,60 @@ $colors: (
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin heading($heading-font-size: 20px) {
+  color: color(Very-dark-cyan);
+  font-family: $heading-font;
+  font-size: $heading-font-size;
+  font-weight: 600;
+  margin: 0;
+}
+
+@mixin paragraph() {
+  font-size: $section-font-size;
+  font-family: $body-font;
+  font-weight: 400;
+  line-height: 25px;
+
+  &--dark {
+    color: color(Very-dark-cyan);
+  }
+
+  &--gray {
+    color: color(Grayish-blue);
+  }
+
+  &--pale {
+    color: color(Very-pale-cyan);
+  }
+}
+
+@mixin btn() {
+  border: none;
+  border-radius: 30px;
+  font-family: $body-font;
+  font-weight: 700;
+  padding: 17px 60px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  transition: 0.2s;
+
+  &--pink {
+    background-color: color(Pink);
+    color: color(Very-pale-cyan);
+  }
+
+  &--white {
+    background-color: color(White);
+    color: color(Very-dark-cyan);
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
 }
 
 ///////////////////////////////////////
@@ -30,25 +90,72 @@ body {
   margin: 0;
 }
 
+.page-container {
+  @include flex(row, center, center);
+  min-height: 100vh;
+}
+
+.page {
+  @include flex(column, flex-start, center);
+}
+
 .intro {
+  @include flex(column, flex-start, flex-start);
+  background: url("../images/bg-hero-desktop.svg") color(Very-pale-cyan);
+  width: 100%;
+
   &__header-container {
     @include flex(row, flex-start, center);
+    width: 100%;
+  }
+
+  &__logo {
+    width: 180px;
+    margin: 40px 0 0 60px;
+  }
+
+  &__header-btn {
+    @include btn();
+    margin: 40px 60px 0 auto;
   }
 
   &__img-text-container {
-    @include flex(row, center, center);
+    @include flex(row, center, flex-start);
+    padding: 80px;
   }
 
   &__text-container {
-    @include flex(column, flex-start, center);
+    @include flex(column, flex-start, flex-start);
+    margin-top: 35px;
+  }
+
+  &__heading {
+    @include heading(35px);
+    width: 90%;
+  }
+
+  &__paragraph {
+    @include paragraph();
+    width: 90%;
+    margin: 20px 0 35px;
+  }
+
+  &__text-btn {
+    @include btn();
   }
 
   &__img-container {
-    @include flex(row, center, center);
+    @include flex(row, center, flex-start);
+  }
+
+  &__img {
+    width: 600px;
   }
 }
 
 .blocks {
+  @include flex(column, flex-start, center);
+
   &__img-text-container {
     @include flex(row, flex-start, center);
 
@@ -64,10 +171,22 @@ body {
   &__text-container {
     @include flex(column, flex-start, flex-start);
   }
+
+  &__heading {
+    @include heading();
+  }
+
+  &__paragraph {
+    @include paragraph();
+  }
 }
 
 .cta {
   @include flex(column, flex-start, center);
+
+  &__btn {
+    @include btn();
+  }
 }
 
 .footer {
