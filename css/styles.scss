@@ -359,11 +359,18 @@ body {
     &__img-text-container {
       flex-direction: column;
       width: 300px;
-      margin: 0;
+      text-align: center;
+      padding-bottom: 30px;
+      margin: 0 0 50px;
     }
 
     &__img {
-      width: 300px;
+      width: 280px;
+      margin-bottom: 30px;
+    }
+
+    &__text-container {
+      align-items: center;
     }
   }
 

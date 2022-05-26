@@ -629,10 +629,18 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 300px;
-    margin: 0;
+    text-align: center;
+    padding-bottom: 30px;
+    margin: 0 0 50px;
   }
   .blocks__img {
-    width: 300px;
+    width: 280px;
+    margin-bottom: 30px;
+  }
+  .blocks__text-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .cta {
     width: 300px;
