@@ -375,11 +375,50 @@ body {
   }
 
   .cta {
-    width: 300px;
+    width: 380px;
+    height: 120px;
+    text-align: center;
+
+    &__container {
+      padding: 40px 0;
+      transform: translate(0, 15px);
+      z-index: 1;
+    }
+
+    &__heading {
+      font-size: 23px;
+    }
+
+    &__btn {
+      font-size: 15px;
+      padding: 13px 40px;
+    }
   }
 
   .footer {
-    flex-direction: column;
-    padding: 0;
+    @include flex(column, flex-start, flex-start);
+    padding: 180px 0 50px;
+
+    &__column {
+      margin-left: 90px;
+    }
+
+    &__text {
+      max-width: 280px;
+    }
+
+    &__social-icon {
+      margin-bottom: 50px;
+    }
+  }
+
+  #footer-column-2 {
+    margin-top: 40px;
+  }
+
+  #footer-column-4 {
+    align-self: center;
+    align-items: center;
+    margin-left: 0;
   }
 }
