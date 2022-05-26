@@ -552,7 +552,7 @@ body {
           transform: translate(0, -21px);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1060px) {
   .intro {
     display: -webkit-box;
     display: -ms-flexbox;
