@@ -12,6 +12,8 @@ $heading-font: "Poppins", sans-serif;
 $body-font: "Open Sans", sans-serif;
 $section-font-size: 16px;
 
+$mobile-width: 1000px;
+
 ///////////////////////////////////////
 // MIXINS /////////////////////////////
 
@@ -72,6 +74,10 @@ $section-font-size: 16px;
     color: color(Very-dark-cyan);
   }
 
+  &--small {
+    padding: 13px 50px;
+  }
+
   &--large {
     font-size: 16.5px;
     padding: 21px 80px;
@@ -80,6 +86,12 @@ $section-font-size: 16px;
   &:hover {
     cursor: pointer;
     opacity: 0.7;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $mobile-width) {
+    @content;
   }
 }
 
@@ -289,4 +301,78 @@ body {
 
 #icon-location {
   transform: translate(0, -21px);
+}
+
+@include mobile() {
+  .intro {
+    @include flex(column, flex-start, center);
+    text-align: center;
+
+    &__logo {
+      width: 130px;
+      margin: 40px 0 0 55px;
+    }
+
+    &__header-btn {
+      font-size: 12px;
+      padding: 10px 30px;
+      margin: 40px 55px 0 auto;
+    }
+
+    &__img-text-container {
+      flex-direction: column;
+      padding: 50px;
+    }
+
+    &__text-container {
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    &__heading {
+      font-size: 29px;
+      width: 100%;
+    }
+
+    &__paragraph {
+      font-size: 17px;
+      width: 100%;
+      margin: 30px 0 35px;
+    }
+
+    &__text-btn {
+      width: 90%;
+    }
+
+    &__img-container {
+      @include flex(column, flex-start, center);
+      width: 100%;
+    }
+
+    &__img {
+      width: 360px;
+      margin-top: 45px;
+    }
+  }
+
+  .blocks {
+    &__img-text-container {
+      flex-direction: column;
+      width: 300px;
+      margin: 0;
+    }
+
+    &__img {
+      width: 300px;
+    }
+  }
+
+  .cta {
+    width: 300px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 0;
+  }
 }
